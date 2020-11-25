@@ -1,0 +1,46 @@
+git 私钥生成
+ssh-keygen -t rsa -C "username" (注：username为你git上的用户名)，
+
+查看本地git的username 和email  git config user.name/user.email
+
+首先需要自己新建一个分支。在本地拉取主分支的代码，然后进行修改，再将本地代码提交到远程自己的分支。合并分支代码的时候，优先远程主分支的代码合并到自己本地的分支。
+git clone 
+
+查看远程分支
+git branch -a
+查看本地分支
+git branch
+
+git checkout 分支
+切换分支，会把跟新的文件带到分支
+
+git  add 跟新文件夹目录的地址
+
+git commit -m ""
+
+git push 
+
+git pull
+ 
+合并代码
+git merge 分支名，将分支合并到本地分支
+
+冲突：修改了同一个代码时会引发冲突，必须解决冲突后再上传
+
+在使用idea进行提交代码时，执行提交时一直出现modified:   .idea/workspace.xml 非常让人烦恼。
+
+问题原因：
+原因在于Git的忽略，Git在同步代码时，设置本地忽略文件的前提是，必须保证Git的远程端仓库中没有这个要忽略的文件。当远端包含有该文件时，本地设置的ignore将不再发挥作用。
+解决方法：在本地的.gitignore文件里面添加上.dea/workspace.xml文件。
+如果已经将本地的文件提交到了远端，那么需要将远端提交的文件给删掉，删除指令为：
+
+git rm -r --cached .idea 
+
+可以使用git status指令来查看删掉的文件，基本上都是***.xml文件。
+
+telnet工具：查看服务器的端口和网络通不通。
+
+ping 查看网络通不通。
+
+
+redis 启动服务命令  redis-server.exe redis.windows.conf
